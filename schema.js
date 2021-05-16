@@ -7,3 +7,5 @@ const todoSchema = new mongoose.Schema({
     isCompleted:{type:String,require:true},
     priority:{type:String,require:true},
 });
+
+module.exports = mongoose.model('todo',todoSchema);
