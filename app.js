@@ -65,7 +65,7 @@ app.put("/update/todo", (req, res) => {
   todoModule
     .findOneAndUpdate(
       { task },
-      { description, deadline, isCompleted, priority }
+      { description, deadline, isCompleted, priority },{new:true}
     )
     .then((result) => {
       res.json(result);
